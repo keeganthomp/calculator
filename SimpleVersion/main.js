@@ -22,7 +22,9 @@ for (let i = 0; i < numberPadButtons.length; i++) {
 }
 
 function displayValues(x) {
+
   display += x.innerHTML;
+  display = display.replace("X", "*");
   answer.innerHTML = display;
 }
 
