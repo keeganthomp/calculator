@@ -26,8 +26,8 @@ body {
 .topRow {
     width: 100%;
     height: 5rem;
-    outline: .5px solid lightgray;
     display: flex;
+    border-bottom: 1px solid lightgray;
 }
 
 .answer {
@@ -43,23 +43,36 @@ body {
 }
 
 .clear {
-    flex: 1;
+    flex: 0 1 24.7%;
     text-align: center;
-    outline: .5px solid lightgray;     
+}
+
+.sides {
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+}
+
+.right {
+    border-right: 1px solid lightgray;
+}
+
+.bottom {
+    border-bottom: 1px solid lightgray;
+    
 }
 
 .numberPad {
-    width: calc(100% / 4);
+    width: calc(99.1% / 4);
     height: 5rem;
-    outline: .5px solid lightgray; 
     text-align: center;  
-    font-weight: 100;     
+    font-weight: 100;
 }
 
 .numberPad:hover {
     background: #83C178;
     color: white;
 }
+
 
 p {
     margin: 0;
