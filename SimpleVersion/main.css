@@ -71,6 +71,7 @@ body {
 .numberPad:hover {
     background: #83C178;
     color: white;
+    cursor: pointer;
 }
 
 
