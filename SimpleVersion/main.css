@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.calcContainer {
+    margin: 0 auto;
+    padding-top: 10%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 350px;
+    
+}
+
+.topRow {
+    width: 100%;
+    height: 5rem;
+    outline: .5px solid black;
+    display: flex;
+}
+
+.answer {
+    width: 100%;
+    flex: 3;
+    line-height: 70px;
+    text-align: right;
+    font-size: 1.5rem;
+}
+
+.calcDisplay {
+    margin-right: 30px;
+}
+
+.clear {
+    flex: 1;
+    text-align: center;
+    outline: .5px solid black;     
+}
+
+.numberPad {
+    width: calc(100% / 4);
+    height: 5rem;
+    outline: .5px solid black; 
+    text-align: center;       
+}
+
+p {
+    margin: 0;
+    line-height: 70px;
+    font-size: 1.5rem;
+}

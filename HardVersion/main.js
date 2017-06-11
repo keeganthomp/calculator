@@ -15,15 +15,18 @@ for (let i = 0; i < numberPadButtons.length; i++) {
       clearConsole();
     } else if (this.innerHTML == "=") {
       calcValues.pop();
-      console.log("This is calsVal:", calcValues);
-      for (let j = 0; j < calcValues.length; j++) {
-        if (this.innerHTML == "+") {
-          for (let k = 0; k < calcValues.length; k++) {
-            pushIntoAdditionArray(calcValues[k]);
-            add(k);
-          }
+      console.log("This is calcValues:", calcValues);
+      // for (let j = 0; j < calcValues.length; j++) {
+        console.log(calcValues[j]);
+        if (calcValues[j] == "+") {
+          var index = calcValues.indexOf("+");
+          calcValues.splice(index, 1);
+          console.log("index:", index);
+          console.log("addition ARray before add:", addition);
+          // pushIntoAdditionArray(calcValues[j]);
+          add(j);
         }
-      }
+      
     }
   });
 }
@@ -38,7 +41,7 @@ function pushIntoArray(int) {
 }
 
 function pushIntoAdditionArray(int) {
-  addition.push(numberPadButtons[int].innerHTML);
+  addition.push(Number(calcValues[int]));
 }
 
 function pushNumbersIntoArray(x) {
@@ -54,9 +57,17 @@ function collectNumbersInput(x) {
 function add(int) {
   //   calcValues.splice(calcValues[int], 1);
   console.log("adding Function!!");
+  for (let k = 0; k < calcValues.length; k++) {
+    pushIntoAdditionArray(calcValues[k]);
+    console.log("Addition Array:", addition);
+  }
+  console.log("calcValues in 'add':", calcValues[int]);
+  console.log("calcValues in add:", calcValues);
   result += calcValues[int];
-  answer.innerHTML = result;
   console.log(result);
+  console.log("Addition Array:", addition);
+
+  // answer.innerHTML = result;
 }
 
 function clearConsole() {
